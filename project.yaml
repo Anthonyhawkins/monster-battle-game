@@ -146,81 +146,7 @@
         - Display a clear message indicating whether the player has won or lost the battle.
         - Provide an option to restart the game or return to the main menu after the battle concludes.
 
-- section: (F) Type Effectiveness (Post-MVP)
-  description: Add complexity to the battle system by implementing type effectiveness, where the effectiveness of each attack is influenced by the types of the attacking and defending monsters.
-  steps:
-    - name: (S) Implement Type Matchups
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want the game to account for type advantages and disadvantages, so that my strategic decisions are rewarded.
-      list:
-        - Define type matchups where each monster type has strengths and weaknesses against other types.
-        - Ensure that each attack calculates damage based on the type matchup between the attacking monster and the defending monster.
-
-    - name: (S) Calculate and Apply Damage Modifiers
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want the game to calculate damage modifiers based on type effectiveness, so that I can see how effective my attacks are.
-      list:
-        - For each attack, calculate the damage modifier based on the type effectiveness.
-        - Apply the damage modifier to the attack's base damage to determine the final damage dealt to the opponent.
-
-    - name: (S) Display Effectiveness Feedback
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want to see feedback on the effectiveness of my attacks, so that I can adjust my strategy during the battle.
-      list:
-        - After each attack, display a message indicating whether the attack was "Super Effective", "Not Very Effective", or neutral.
-        - Ensure the feedback is clear and immediate, helping players understand the outcome of their actions.
-
-    - name: (S) Testing and Balancing Type Effectiveness
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a developer, I want to test and balance the type effectiveness system, so that the game remains fair and enjoyable.
-      list:
-        - Test different type matchups to ensure that the damage calculations are working as expected.
-        - Adjust type effectiveness modifiers if certain matchups are too overpowered or underpowered.
-        - Gather feedback from playtesting to make any necessary balance adjustments.
-
-- section: (F) AI Opponent (Post-MVP)
-  description: Develop a more sophisticated AI system for the computer-controlled opponent, making strategic decisions based on the battle's state.
-  steps:
-    - name: (S) AI Strategic Move Selection
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want the computer opponent to make strategic decisions, so that I am challenged to think critically during the battle.
-      list:
-        - Enhance the AI to consider type effectiveness when selecting moves, prioritizing moves that are super effective against the player's active monster.
-        - Implement logic for the AI to use healing or status effect abilities when strategically advantageous.
-
-    - name: (S) AI Switching Monsters
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want the computer opponent to switch monsters when necessary, so that it can adapt to my strategy and provide a tougher challenge.
-      list:
-        - Implement AI logic to switch monsters if the current monster is at a significant type disadvantage or low HP.
-        - Ensure the AI switches to a monster with a type advantage or higher remaining HP.
-
-- section: (F) Ability Effects (Post-MVP)
-  description: Add complexity to the abilities that monsters can use during battle, including various effects like healing, status changes, and stat adjustments.
-  steps:
-    - name: (S) Implement Healing Abilities
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want to use abilities that heal my monsters, so that I can prolong their survival during battles.
-      list:
-        - Implement abilities that restore HP to the active monster.
-        - Ensure that healing abilities cannot exceed the monster's maximum HP.
-
-    - name: (S) Implement Status Effect Abilities
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want to use abilities that inflict status effects on the opponent's monsters, so that I can gain an advantage in battle.
-      list:
-        - Implement abilities that inflict status effects like burn, paralysis, or poison.
-        - Include indicators to show when a monster is affected by a status effect.
-
-    - name: (S) Implement Buff and Debuff Abilities
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want to use abilities that temporarily boost my monsters' stats or weaken the opponent's stats, so that I can strategically alter the flow of battle.
-      list:
-        - Implement abilities that temporarily increase a monster's attack, defense, or other stats.
-        - Implement abilities that temporarily decrease the opponent's stats, such as lowering defense or attack.
-        - Ensure that buffs and debuffs last for a set number of turns and revert to normal afterward.
-
-- section: (F) Victory and Defeat Conditions (Post-MVP)
+- section: (F) Victory and Defeat Conditions
   description: Define the conditions under which a player or the AI wins or loses the battle, and provide appropriate feedback and options at the end of the game.
   steps:
     - name: (S) Define Win Condition
@@ -261,6 +187,81 @@
         - Simulate battles to test both win and loss conditions, ensuring the correct messages and options are displayed.
         - Test edge cases, such as a simultaneous KO (knockout) of both the player's and AI's last monsters, to ensure the game handles these correctly.
         - Gather feedback from playtesting to make any necessary adjustments to the end-of-battle flow.
+
+- section: (F) Type Effectiveness (Post-MVP)
+  description: Add complexity to the battle system by implementing type effectiveness, where the effectiveness of each attack is influenced by the types of the attacking and defending monsters.
+  steps:
+    - name: (S) Implement Type Matchups
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to account for type advantages and disadvantages, so that my strategic decisions are rewarded.
+      list:
+        - Define type matchups where each monster type has strengths and weaknesses against other types.
+        - Ensure that each attack calculates damage based on the type matchup between the attacking monster and the defending monster.
+
+    - name: (S) Calculate and Apply Damage Modifiers
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to calculate damage modifiers based on type effectiveness, so that I can see how effective my attacks are.
+      list:
+        - For each attack, calculate the damage modifier based on the type effectiveness.
+        - Apply the damage modifier to the attack's base damage to determine the final damage dealt to the opponent.
+
+    - name: (S) Display Effectiveness Feedback
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to see feedback on the effectiveness of my attacks, so that I can adjust my strategy during the battle.
+      list:
+        - After each attack, display a message indicating whether the attack was "Super Effective", "Not Very Effective", or neutral.
+        - Ensure the feedback is clear and immediate, helping players understand the outcome of their actions.
+
+    - name: (S) Testing and Balancing Type Effectiveness
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a developer, I want to test and balance the type effectiveness system, so that the game remains fair and enjoyable.
+      list:
+        - Test different type matchups to ensure that the damage calculations are working as expected.
+        - Adjust type effectiveness modifiers if certain matchups are too overpowered or underpowered.
+        - Gather feedback from playtesting to make any necessary balance adjustments.
+
+- section: (F) Ability Effects
+  description: Add complexity to the abilities that monsters can use during battle, including various effects like healing, status changes, and stat adjustments.
+  steps:
+    - name: (S) Implement Healing Abilities
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to use abilities that heal my monsters, so that I can prolong their survival during battles.
+      list:
+        - Implement abilities that restore HP to the active monster.
+        - Ensure that healing abilities cannot exceed the monster's maximum HP.
+
+    - name: (S) Implement Status Effect Abilities
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to use abilities that inflict status effects on the opponent's monsters, so that I can gain an advantage in battle.
+      list:
+        - Implement abilities that inflict status effects like burn, paralysis, or poison.
+        - Include indicators to show when a monster is affected by a status effect.
+
+    - name: (S) Implement Buff and Debuff Abilities
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to use abilities that temporarily boost my monsters' stats or weaken the opponent's stats, so that I can strategically alter the flow of battle.
+      list:
+        - Implement abilities that temporarily increase a monster's attack, defense, or other stats.
+        - Implement abilities that temporarily decrease the opponent's stats, such as lowering defense or attack.
+        - Ensure that buffs and debuffs last for a set number of turns and revert to normal afterward.
+
+- section: (F) Advanced AI Opponent
+  description: Develop a more sophisticated AI system for the computer-controlled opponent, making strategic decisions based on the battle's state.
+  steps:
+    - name: (S) AI Strategic Move Selection
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the computer opponent to make strategic decisions, so that I am challenged to think critically during the battle.
+      list:
+        - Enhance the AI to consider type effectiveness when selecting moves, prioritizing moves that are super effective against the player's active monster.
+        - Implement logic for the AI to use healing or status effect abilities when strategically advantageous.
+
+    - name: (S) AI Switching Monsters
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the computer opponent to switch monsters when necessary, so that it can adapt to my strategy and provide a tougher challenge.
+      list:
+        - Implement AI logic to switch monsters if the current monster is at a significant type disadvantage or low HP.
+        - Ensure the AI switches to a monster with a type advantage or higher remaining HP.
+
 
 - section: (F) Score Tracking and Record Keeping (Post-MVP)
   description: Implement a system to track and save the player's win/loss record across multiple games.
