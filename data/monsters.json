@@ -1,0 +1,385 @@
+{
+  "monsters": [
+    {
+      "name": "Flamepaw",
+      "type": "Fire",
+      "hp": 90,
+      "abilities": [
+        {
+          "name": "Blaze",
+          "description": "Increased fire attack power when HP is low",
+          "damage": 30,
+          "special": "Increases fire-type damage by 50% when HP is below 30%"
+        },
+        {
+          "name": "Ember Blast",
+          "description": "Releases a burst of flames",
+          "damage": 40,
+          "special": "No special effect"
+        }
+      ]
+    },
+    {
+      "name": "Aquadra",
+      "type": "Water",
+      "hp": 100,
+      "abilities": [
+        {
+          "name": "Aqua Shield",
+          "description": "Reduces damage from fire and earth attacks",
+          "damage": 0,
+          "special": "Reduces damage taken from Fire and Earth attacks by 50%"
+        },
+        {
+          "name": "Tidal Wave",
+          "description": "A massive wave hits all opponents",
+          "damage": 45,
+          "special": "Damages all opponents"
+        }
+      ]
+    },
+    {
+      "name": "Terradon",
+      "type": "Earth",
+      "hp": 110,
+      "abilities": [
+        {
+          "name": "Earthquake",
+          "description": "Powerful ground-shaking attack",
+          "damage": 50,
+          "special": "Damages all opponents"
+        },
+        {
+          "name": "Mudslide",
+          "description": "Slows down the opponent",
+          "damage": 30,
+          "special": "Reduces opponent’s speed by 10%"
+        }
+      ]
+    },
+    {
+      "name": "Windrider",
+      "type": "Wind",
+      "hp": 85,
+      "abilities": [
+        {
+          "name": "Gale Force",
+          "description": "Powerful wind attack",
+          "damage": 40,
+          "special": "May reduce opponent’s accuracy by 10%"
+        },
+        {
+          "name": "Aerial Strike",
+          "description": "Fast attack that never misses",
+          "damage": 35,
+          "special": "Never misses"
+        }
+      ]
+    },
+    {
+      "name": "Leafstalker",
+      "type": "Plant",
+      "hp": 95,
+      "abilities": [
+        {
+          "name": "Vine Lash",
+          "description": "Whips the opponent with vines",
+          "damage": 35,
+          "special": "Has a high chance to hit first"
+        },
+        {
+          "name": "Nature's Gift",
+          "description": "Heals HP over time",
+          "damage": 0,
+          "heal": 10,
+          "special": "Restores 10 HP per turn for 3 turns"
+        }
+      ]
+    },
+    {
+      "name": "Pyroclaw",
+      "type": "Fire",
+      "hp": 90,
+      "abilities": [
+        {
+          "name": "Flame Punch",
+          "description": "May burn the opponent",
+          "damage": 40,
+          "special": "20% chance to burn opponent"
+        },
+        {
+          "name": "Inferno",
+          "description": "High-damage fire attack",
+          "damage": 50,
+          "special": "No special effect"
+        }
+      ]
+    },
+    {
+      "name": "Hydrostorm",
+      "type": "Water",
+      "hp": 105,
+      "abilities": [
+        {
+          "name": "Hydro Pump",
+          "description": "Strong water attack",
+          "damage": 50,
+          "special": "No special effect"
+        },
+        {
+          "name": "Bubble Beam",
+          "description": "May reduce opponent’s speed",
+          "damage": 35,
+          "special": "20% chance to reduce opponent’s speed by 10%"
+        }
+      ]
+    },
+    {
+      "name": "Quakehorn",
+      "type": "Earth",
+      "hp": 115,
+      "abilities": [
+        {
+          "name": "Rock Smash",
+          "description": "Smashes the opponent with a boulder",
+          "damage": 45,
+          "special": "No special effect"
+        },
+        {
+          "name": "Earth Shield",
+          "description": "Raises defense sharply",
+          "damage": 0,
+          "special": "Increases defense by 30%"
+        }
+      ]
+    },
+    {
+      "name": "Stormtalon",
+      "type": "Wind",
+      "hp": 90,
+      "abilities": [
+        {
+          "name": "Thunder Gust",
+          "description": "A shocking gust of wind",
+          "damage": 45,
+          "special": "10% chance to paralyze opponent"
+        },
+        {
+          "name": "Air Cutter",
+          "description": "Sharp wind cuts through the opponent",
+          "damage": 40,
+          "special": "High critical hit ratio"
+        }
+      ]
+    },
+    {
+      "name": "Thornwhip",
+      "type": "Plant",
+      "hp": 95,
+      "abilities": [
+        {
+          "name": "Razor Leaf",
+          "description": "Sharp leaves attack the opponent",
+          "damage": 35,
+          "special": "High critical hit ratio"
+        },
+        {
+          "name": "Growth",
+          "description": "Increases attack power",
+          "damage": 0,
+          "special": "Increases attack by 20%"
+        }
+      ]
+    },
+    {
+      "name": "Emberwolf",
+      "type": "Fire",
+      "hp": 95,
+      "abilities": [
+        {
+          "name": "Fire Fang",
+          "description": "A fiery bite that may cause a burn",
+          "damage": 40,
+          "special": "20% chance to burn opponent"
+        },
+        {
+          "name": "Flame Charge",
+          "description": "Increases speed after attacking",
+          "damage": 35,
+          "special": "Increases own speed by 10%"
+        }
+      ]
+    },
+    {
+      "name": "Aquabeast",
+      "type": "Water",
+      "hp": 100,
+      "abilities": [
+        {
+          "name": "Water Jet",
+          "description": "Fast water attack",
+          "damage": 35,
+          "special": "High chance to hit first"
+        },
+        {
+          "name": "Tsunami",
+          "description": "Massive water attack",
+          "damage": 50,
+          "special": "No special effect"
+        }
+      ]
+    },
+    {
+      "name": "Boulderback",
+      "type": "Earth",
+      "hp": 120,
+      "abilities": [
+        {
+          "name": "Stone Edge",
+          "description": "Powerful rock attack",
+          "damage": 50,
+          "special": "High critical hit ratio"
+        },
+        {
+          "name": "Sturdy",
+          "description": "Prevents being knocked out in one hit",
+          "damage": 0,
+          "special": "Cannot be knocked out from full HP in one hit"
+        }
+      ]
+    },
+    {
+      "name": "Skyflare",
+      "type": "Wind",
+      "hp": 85,
+      "abilities": [
+        {
+          "name": "Heatwave",
+          "description": "A hot gust that may cause a burn",
+          "damage": 45,
+          "special": "20% chance to burn opponent"
+        },
+        {
+          "name": "Wind Slash",
+          "description": "Fast and sharp wind attack",
+          "damage": 35,
+          "special": "No special effect"
+        }
+      ]
+    },
+    {
+      "name": "Rootsnapper",
+      "type": "Plant",
+      "hp": 100,
+      "abilities": [
+        {
+          "name": "Root Trap",
+          "description": "Traps the opponent with roots",
+          "damage": 0,
+          "special": "Reduces opponent’s speed by 20%"
+        },
+        {
+          "name": "Leech Seed",
+          "description": "Saps health from the opponent",
+          "damage": 0,
+          "special": "Heals 10 HP per turn while dealing 10 damage to the opponent"
+        }
+      ]
+    },
+    {
+      "name": "Flametalon",
+      "type": "Fire",
+      "hp": 90,
+      "abilities": [
+        {
+          "name": "Flame Vortex",
+          "description": "Traps the opponent in a vortex of flames",
+          "damage": 40,
+          "special": "Deals 10 damage per turn for 3 turns"
+        },
+        {
+          "name": "Firestorm",
+          "description": "A storm of fire that hits all opponents",
+          "damage": 45,
+          "special": "Damages all opponents"
+        }
+      ]
+    },
+    {
+      "name": "Aquaquake",
+      "type": "Water",
+      "hp": 110,
+      "abilities": [
+        {
+          "name": "Muddy Water",
+          "description": "A muddy water attack that lowers accuracy",
+          "damage": 40,
+          "special": "20% chance to lower opponent’s accuracy by 10%"
+        },
+        {
+          "name": "Tectonic Wave",
+          "description": "A massive earthquake followed by a water surge",
+          "damage": 50,
+          "special": "Damages all opponents"
+        }
+      ]
+    },
+    {
+      "name": "Petalstorm",
+      "type": "Plant",
+      "hp": 95,
+      "abilities": [
+        {
+          "name": "Petal Dance",
+          "description": "Attacks with a flurry of petals",
+          "damage": 40,
+          "special": "No special effect"
+        },
+        {
+          "name": "Cyclone",
+          "description": "A wind attack that disrupts the opponent",
+          "damage": 35,
+          "special": "May reduce opponent’s accuracy by 10%"
+        }
+      ]
+    },
+    {
+      "name": "Volcanox",
+      "type": "Fire",
+      "hp": 105,
+      "abilities": [
+        {
+          "name": "Lava Plume",
+          "description": "Erupts with a burst of lava",
+          "damage": 50,
+          "special": "20% chance to burn opponent"
+        },
+        {
+          "name": "Magma Armor",
+          "description": "Hardens the skin to reduce damage",
+          "damage": 0,
+          "special": "Reduces damage taken by 20%"
+        }
+      ]
+    },
+    {
+      "name": "Seastorm",
+      "type": "Water",
+      "hp": 100,
+      "abilities": [
+        {
+          "name": "Whirlpool",
+          "description": "Traps the opponent in a vortex of water",
+          "damage": 30,
+          "special": "Traps opponent, dealing 10 damage per turn for 3 turns"
+        },
+        {
+          "name": "Gale Surge",
+          "description": "A combination of wind and water attack",
+          "damage": 40,
+          "special": "No special effect"
+        }
+      ]
+    }
+  ]
+}
