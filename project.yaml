@@ -173,13 +173,6 @@
         - Include a summary of the battle (e.g., number of monsters defeated).
         - Provide an option to start a new game or return to the main menu.
 
-    - name: (S) Battle End Options
-      icon: material-sticky_note_2 bg-yellow-600
-      text: As a player, I want the game to offer options at the end of the battle, so that I can choose whether to play again or exit.
-      list:
-        - After displaying the victory or defeat message, present options to start a new game or return to the main menu.
-        - Reset game variables if starting a new game, or exit to the initial game screen if returning to the main menu.
-
     - name: (S) Test Win/Loss Scenarios
       icon: material-sticky_note_2 bg-yellow-600
       text: As a developer, I want to test all possible win and loss scenarios, so that the game correctly handles each outcome.
@@ -187,6 +180,30 @@
         - Simulate battles to test both win and loss conditions, ensuring the correct messages and options are displayed.
         - Test edge cases, such as a simultaneous KO (knockout) of both the player's and AI's last monsters, to ensure the game handles these correctly.
         - Gather feedback from playtesting to make any necessary adjustments to the end-of-battle flow.
+
+- section: (F) Replayability
+  description: Enhance the game’s replayability by offering different game modes, encouraging players to play multiple times and experience varied challenges.
+  steps:
+    - name: (S) Battle End Options
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to offer options at the end of the battle, so that I can choose whether to play again or exit.
+      list:
+        - After displaying the victory or defeat message, present options to start a new game or return to the main menu.
+        - Reset game variables if starting a new game, or exit to the initial game screen if returning to the main menu.
+
+    - name: (S) Start a New Battle With Same Team
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to be able to start a new battle with my team, so that I can skip the monster selection process
+      list:
+        - Allow player to use existing team.
+        - Ask the player if the computer should use the same team or select a new team
+
+    - name: (S) Select a New Team for the Next Battle
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to be able to start a new battle with a new team, so that I play with new monsters.
+      list:
+        - Allow player to select a new team.
+        - Ask the player if the computer should use the same team or select a new team
 
 - section: (F) Type Effectiveness (Post-MVP)
   description: Add complexity to the battle system by implementing type effectiveness, where the effectiveness of each attack is influenced by the types of the attacking and defending monsters.
