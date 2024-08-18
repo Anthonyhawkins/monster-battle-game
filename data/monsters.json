@@ -53,7 +53,7 @@
           "name": "Mudslide",
           "description": "Slows down the opponent",
           "damage": 30,
-          "special": "Reduces opponent’s speed by 10%"
+          "special": "15% chance to follow up with a second attack."
         }
       ]
     },
@@ -66,7 +66,7 @@
           "name": "Gale Force",
           "description": "Powerful wind attack",
           "damage": 40,
-          "special": "May reduce opponent’s accuracy by 10%"
+          "special": "May reduce opponent's accuracy by 10%"
         },
         {
           "name": "Aerial Strike",
@@ -128,9 +128,9 @@
         },
         {
           "name": "Bubble Beam",
-          "description": "May reduce opponent’s speed",
+          "description": "May reduce opponent's speed",
           "damage": 35,
-          "special": "20% chance to reduce opponent’s speed by 10%"
+          "special": "10% chance to follow up with a second attack."
         }
       ]
     },
@@ -206,7 +206,7 @@
           "name": "Flame Charge",
           "description": "Increases speed after attacking",
           "damage": 35,
-          "special": "Increases own speed by 10%"
+          "special": "10% chance to follow up with a second attack."
         }
       ]
     },
@@ -276,7 +276,7 @@
           "name": "Root Trap",
           "description": "Traps the opponent with roots",
           "damage": 0,
-          "special": "Reduces opponent’s speed by 20%"
+          "special": "Your opponent's monster cannot be swapped out for another monster."
         },
         {
           "name": "Leech Seed",
@@ -314,7 +314,7 @@
           "name": "Muddy Water",
           "description": "A muddy water attack that lowers accuracy",
           "damage": 40,
-          "special": "20% chance to lower opponent’s accuracy by 10%"
+          "special": "20% chance to lower opponent's accuracy by 10%"
         },
         {
           "name": "Tectonic Wave",
@@ -339,7 +339,7 @@
           "name": "Cyclone",
           "description": "A wind attack that disrupts the opponent",
           "damage": 35,
-          "special": "May reduce opponent’s accuracy by 10%"
+          "special": "May reduce opponent's accuracy by 10%"
         }
       ]
     },

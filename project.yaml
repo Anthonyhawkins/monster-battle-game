@@ -1,0 +1,303 @@
+- section: Working Agreement
+  description: A working agreement is essentially a promise to you or to your team on habits and processes you agree to follow while working on a project.
+  tip: Try to incorporate as many of these habits as possible, as is they aim to reflect a real-world workflow vs just hacking away at something.  They are designed to keep you organized and ensure you deliver a quality product.
+  steps:
+  - name: Error Handling and Feedback
+    habit: true
+    icon: material-error bg-rose-600
+    text: As a developer, I agree to handle errors gracefully and provide feedback to the user.
+    list:
+      - Implement error messages for invalid commands, missing arguments, or other user errors.
+      - Ensure success messages for operations such as adding tasks or creating lists are distinct and easily visible.
+      - Provide suggestions for correcting common errors to guide users in the right direction.
+  - name: Stories Must be Properly Tested
+    habit: true
+    optional: true
+    icon: material-labs bg-emerald-600
+    text: As a developer, I agree to ensure each story is properly tested.  (A lot of times it can be a pain to test a CLI's tool main function, you'll understand when you get there, try your best, 100% code coverage is not required)
+    list:
+      - Each story includes necessary unit testing.
+      - Tests are run upon completion of a story.
+      - All tests should pass before merge.
+  - name: Use Story Branches
+    habit: true
+    optional: true
+    icon: material-folder_data bg-amber-600
+    text: As a developer, I agree to create a new git branch for each story I work on.
+    list:
+      - Checkout a new branch for each story.
+      - Development for a story is committed to the story branch.
+      - Upon completion, create a PR to merge a story branch back into main.
+      - If you are doing this project solo, you will be merging your own PRs.
+
+- section: (F) Game Initialization
+  description: Initialize the game with basic setup tasks, including loading monsters and setting up the player's and computer's teams.
+  steps:
+    - name: (S) Welcome Message and Instructions
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to start with a welcome message and instructions, so that I know how to play the game and what to expect.
+      list:
+        - The game should display a welcome message at the start.
+        - Provide basic instructions on how to play and input commands.
+        - Start the game immediately after displaying the instructions.
+      links:
+        - Game Rules: https://github.com/Anthonyhawkins/monster-battle-game/blob/main/README.md
+
+    - name: (S) Player Name Input
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to ask for my name at the start, so that I can personalize my game experience.
+      list:
+        - Prompt the player to enter their name at the start of the game.
+        - Store the player's name for use in the game (e.g., greetings, score tracking).
+        - Greet the player using their entered name.
+
+    - name: (S) Load Monsters from JSON File
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a developer, I want the game to load monster data from a JSON file, so that the game can easily use and update the list of monsters.
+      list:
+        - The game should read monster data from a predefined JSON file at the start.
+        - Ensure that the monster data includes all necessary information (e.g., name, type, HP, abilities).
+        - Validate the JSON file to ensure it is correctly formatted and contains all required fields.
+        - Provide an error message if the JSON file cannot be loaded.
+      links:
+        - Monsters JSON file: https://github.com/Anthonyhawkins/monster-battle-game/blob/main/data/monsters.json
+
+    - name: (S) Random Computer Team Selection
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the computer to have a randomly selected team of monsters, so that each game feels unique.
+      list:
+        - Randomly select the computer's team of 3 monsters from the available pool.
+        - Display the computer's team to the player after selection.
+
+- section: (F) Monster Selection
+  description: Allow the player to choose their team of monsters to prepare for battle.
+  steps:
+    - name: (S) Display Monster List
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to see a list of available monsters, so that I can make an informed decision about which monsters to choose.
+      list:
+        - Display a list of all 20 monsters, including their names, types, HP, and abilities.
+        - Ensure the monster list is easy to read and navigate.
+        - Include brief descriptions of each monster's strengths and weaknesses.
+
+    - name: (S) Monster Selection by Player
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to choose 3 monsters from the available list, so that I can form my battle team.
+      list:
+        - Allow the player to select 3 monsters from the displayed list.
+        - Provide feedback confirming each selection.
+        - Allow the player to review and change their selections before finalizing their team.
+
+    - name: (S) Confirmation of Selected Team
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to confirm my selected team of monsters, so that I can proceed to battle with confidence.
+      list:
+        - Display the player's selected team with all relevant details (name, type, HP, abilities).
+        - Ask the player to confirm their team before starting the battle.
+        - Allow the player to go back and reselect monsters if needed.
+
+- section: (F) Battle System
+  description: Implement a simple turn-based battle system to allow players and the computer to take turns using direct attacks.
+  steps:
+    - name: (S) Select Active Monster
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to choose which of my monsters will be the active monster at the start of the battle, so that I can begin the fight with my preferred strategy.
+      list:
+        - At the start of the battle, prompt the player to select one of their three monsters to be the active monster.
+        - Display the selected monster's details for confirmation before starting the battle.
+        - The selected monster will remain active until it is knocked out or the player chooses to switch.
+        - The computer should randomly select its active monster
+        - The computer's monster will remain active until it is knocked out, the computer will randomly select a new active monster.
+
+    - name: (S) Turn-Based Combat
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the battle to be turn-based, so that I have time to think and plan my moves strategically.
+      list:
+        - Implement a turn-based system where the player and computer take turns using abilities.
+        - Allow the player to select an ability for their active monster each turn.
+
+    - name: (S) Player Move Selection
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to choose which ability my monster will use during its turn, so that I can control the flow of the battle.
+      list:
+        - Display a list of available abilities for the active monster during the player's turn.
+        - Allow the player to select one ability to use on the computer's active monster.
+        - Apply the chosen ability's effects, focusing only on direct damage for the MVP.
+
+    - name: (S) Basic AI Move Selection
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the computer opponent to select moves intelligently, so that the battle feels challenging and engaging.
+      list:
+        - Implement a basic AI system that selects moves randomly from the available abilities of the computer's active monster.
+        - Ensure the AI always selects a valid move based on the current state of the battle.
+
+    - name: (S) HP Updates
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to see the HP of my monsters and the opponent's monsters update in real-time, so that I can track the progress of the battle.
+      list:
+        - Update the HP of the targeted monster after each attack.
+        - Ensure the battle UI clearly shows the current HP of all active monsters.
+
+    - name: (S) Battle Conclusion
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to clearly indicate when the battle has ended and who the winner is, so that I can feel the satisfaction of victory or learn from defeat.
+      list:
+        - The battle should end when all monsters on one side are knocked out.
+        - Display a clear message indicating whether the player has won or lost the battle.
+        - Provide an option to restart the game or return to the main menu after the battle concludes.
+
+- section: (F) Type Effectiveness (Post-MVP)
+  description: Add complexity to the battle system by implementing type effectiveness, where the effectiveness of each attack is influenced by the types of the attacking and defending monsters.
+  steps:
+    - name: (S) Implement Type Matchups
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to account for type advantages and disadvantages, so that my strategic decisions are rewarded.
+      list:
+        - Define type matchups where each monster type has strengths and weaknesses against other types.
+        - Ensure that each attack calculates damage based on the type matchup between the attacking monster and the defending monster.
+
+    - name: (S) Calculate and Apply Damage Modifiers
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to calculate damage modifiers based on type effectiveness, so that I can see how effective my attacks are.
+      list:
+        - For each attack, calculate the damage modifier based on the type effectiveness.
+        - Apply the damage modifier to the attack's base damage to determine the final damage dealt to the opponent.
+
+    - name: (S) Display Effectiveness Feedback
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to see feedback on the effectiveness of my attacks, so that I can adjust my strategy during the battle.
+      list:
+        - After each attack, display a message indicating whether the attack was "Super Effective", "Not Very Effective", or neutral.
+        - Ensure the feedback is clear and immediate, helping players understand the outcome of their actions.
+
+    - name: (S) Testing and Balancing Type Effectiveness
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a developer, I want to test and balance the type effectiveness system, so that the game remains fair and enjoyable.
+      list:
+        - Test different type matchups to ensure that the damage calculations are working as expected.
+        - Adjust type effectiveness modifiers if certain matchups are too overpowered or underpowered.
+        - Gather feedback from playtesting to make any necessary balance adjustments.
+
+- section: (F) AI Opponent (Post-MVP)
+  description: Develop a more sophisticated AI system for the computer-controlled opponent, making strategic decisions based on the battle's state.
+  steps:
+    - name: (S) AI Strategic Move Selection
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the computer opponent to make strategic decisions, so that I am challenged to think critically during the battle.
+      list:
+        - Enhance the AI to consider type effectiveness when selecting moves, prioritizing moves that are super effective against the player's active monster.
+        - Implement logic for the AI to use healing or status effect abilities when strategically advantageous.
+
+    - name: (S) AI Switching Monsters
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the computer opponent to switch monsters when necessary, so that it can adapt to my strategy and provide a tougher challenge.
+      list:
+        - Implement AI logic to switch monsters if the current monster is at a significant type disadvantage or low HP.
+        - Ensure the AI switches to a monster with a type advantage or higher remaining HP.
+
+- section: (F) Ability Effects (Post-MVP)
+  description: Add complexity to the abilities that monsters can use during battle, including various effects like healing, status changes, and stat adjustments.
+  steps:
+    - name: (S) Implement Healing Abilities
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to use abilities that heal my monsters, so that I can prolong their survival during battles.
+      list:
+        - Implement abilities that restore HP to the active monster.
+        - Ensure that healing abilities cannot exceed the monster's maximum HP.
+
+    - name: (S) Implement Status Effect Abilities
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to use abilities that inflict status effects on the opponent's monsters, so that I can gain an advantage in battle.
+      list:
+        - Implement abilities that inflict status effects like burn, paralysis, or poison.
+        - Include indicators to show when a monster is affected by a status effect.
+
+    - name: (S) Implement Buff and Debuff Abilities
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to use abilities that temporarily boost my monsters' stats or weaken the opponent's stats, so that I can strategically alter the flow of battle.
+      list:
+        - Implement abilities that temporarily increase a monster's attack, defense, or other stats.
+        - Implement abilities that temporarily decrease the opponent's stats, such as lowering defense or attack.
+        - Ensure that buffs and debuffs last for a set number of turns and revert to normal afterward.
+
+- section: (F) Victory and Defeat Conditions (Post-MVP)
+  description: Define the conditions under which a player or the AI wins or loses the battle, and provide appropriate feedback and options at the end of the game.
+  steps:
+    - name: (S) Define Win Condition
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to clearly define how to win, so that I know what I am aiming for during the battle.
+      list:
+        - The player wins when all of the AI's monsters are knocked out (HP reduced to 0).
+        - The AI wins when all of the player's monsters are knocked out.
+        - Ensure the game checks the win condition after every turn.
+
+    - name: (S) Display Victory Message
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to display a victory message when I win, so that I can feel a sense of accomplishment.
+      list:
+        - Display a clear victory message when the player wins.
+        - Include a summary of the player's performance (e.g., remaining HP, number of turns taken).
+        - Provide an option to start a new game or return to the main menu.
+
+    - name: (S) Display Defeat Message
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to display a defeat message when I lose, so that I can understand the outcome and try again.
+      list:
+        - Display a clear defeat message when the player loses.
+        - Include a summary of the battle (e.g., number of monsters defeated).
+        - Provide an option to start a new game or return to the main menu.
+
+    - name: (S) Battle End Options
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to offer options at the end of the battle, so that I can choose whether to play again or exit.
+      list:
+        - After displaying the victory or defeat message, present options to start a new game or return to the main menu.
+        - Reset game variables if starting a new game, or exit to the initial game screen if returning to the main menu.
+
+    - name: (S) Test Win/Loss Scenarios
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a developer, I want to test all possible win and loss scenarios, so that the game correctly handles each outcome.
+      list:
+        - Simulate battles to test both win and loss conditions, ensuring the correct messages and options are displayed.
+        - Test edge cases, such as a simultaneous KO (knockout) of both the player's and AI's last monsters, to ensure the game handles these correctly.
+        - Gather feedback from playtesting to make any necessary adjustments to the end-of-battle flow.
+
+- section: (F) Score Tracking and Record Keeping (Post-MVP)
+  description: Implement a system to track and save the player's win/loss record across multiple games.
+  steps:
+    - name: (S) Implement Win/Loss Tracking
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to keep track of how many battles I have won and lost, so that I can monitor my progress over time.
+      list:
+        - Create a system to track the number of wins and losses for the player.
+        - Display the current win/loss record on the main menu or after each battle.
+        - Ensure the win/loss record persists between game sessions.
+
+    - name: (S) Save Score Data to JSON
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want my score and battle record to be saved to a JSON file, so that I can continue tracking my progress in future sessions.
+      list:
+        - Save the player's win/loss record to a JSON file at the end of each game session.
+        - Ensure the JSON file is structured in a readable format.
+        - Load the previous record from the JSON file if the player starts a new game session.
+
+    - name: (S) Load Score Data from JSON
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want the game to load my previous score data at the start, so that my progress is not lost between sessions.
+      list:
+        - Load the player's win/loss record from the JSON file at the start of the game.
+        - Handle cases where the JSON file is missing or corrupted by initializing a new score record.
+
+    - name: (S) Display Win/Loss Record
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a player, I want to view my win/loss record at any time, so that I can see how well I've been performing.
+      list:
+        - Provide an option in the main menu to view the player's current win/loss record.
+        - Update the display after each battle to reflect the most recent results.
+
+    - name: (S) Test Score Tracking System
+      icon: material-sticky_note_2 bg-yellow-600
+      text: As a developer, I want to test the score tracking system thoroughly, so that it accurately records and retrieves the player's performance data.
+      list:
+        - Test the saving and loading of score data to ensure it works correctly across multiple game sessions.
+        - Validate the JSON file structure and handle any edge cases.
